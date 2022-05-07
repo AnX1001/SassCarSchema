@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Bilskjema</title>
+  </head>
+  <body>
+    <section class="form-wrapper">
+      <img
+        class="form-wrapper__car-image"
+        src="https://images.unsplash.com/photo-1620223741726-7d39ff6e4e6c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1965&q=80"
+        alt="bilde av bil"
+      />
+      <form action="" class="form-wrapper__form-content">
+        <label for="fornavn" aria-label="Skriv ditt fornavn" required
+          >Fornavn
+          <input type="text" placeholder="Fornavn" required />
+        </label>
+        <label for="etternavn"
+          >Etternavn
+          <input
+            type="text"
+            value=""
+            placeholder="Etternavn"
+            aria-label="Skriv ditt etternavn"
+          />
+        </label>
+        <label for="email" aria-label="Oppgi e-postadresse"
+          >E-post
+          <input type="email" placeholder="e.g. navn@mail.com" />
+        </label>
+        <label for="registeringsnummer"
+          >Skriv inn registeringsnummer
+          <input
+            required
+            class="car-register-number"
+            type="text"
+            maxlength="7"
+            pattern="[a-zA-Z]+[0-9]+"
+            placeholder="e.g. XX23451"
+          />
+        </label>
+        <label for="bilmodell" aria-label="Velg bilmodell"
+          >Velg bilmodell
+          <select
+            required
+            class="cars-selection"
+            aria-label="Velg bilmodell"
+            name="bilmodell"
+            id="car-model"
+          >
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+          </select>
+        </label>
+
+        <label for="car-type" aria-label="Velg biltype"
+          >Velg type karosseri
+          <select
+            required
+            class="car-type-selection"
+            aria-label="Velg kjøretøy"
+            name="car-type"
+            id="cars"
+          >
+            <option value="sedan">Sedan</option>
+            <option value="suv">SUV</option>
+            <option value="kassebil">Kassebil</option>
+            <option value="Kombi 5-dørs">Kombi 5-dørs</option>
+            <option value="Stasjonsvogn">Stasjonsvogn</option>
+          </select>
+        </label>
+
+        <label for="Registeringsår" aria-label="Oppgi registeringsår"
+          >Velg registreringsår
+          <input aria-label="Registeringsår" type="date" value="Send form" />
+        </label>
+        <label
+          aria-label="registeringsår i Norge"
+          for="Registert første gang i Norge"
+          >Velg registreringsår i Norge
+          <input type="date" value="" />
+        </label>
+        <button class="btn-submit" type="submit">Send skjema</button>
+      </form>
+    </section>
+  </body>
+</html>

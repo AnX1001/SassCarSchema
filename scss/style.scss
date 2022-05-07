@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+
+$normal-spacing: 15px;
+$large-spacing: 22px;
+$small-spacing: 8px;
+$normal-height: 40px;
+$form-background-color: #3e4444;
+$btn-hover-color: #c1946a;
+$btn-secondary-color: rgb(129, 141, 53);
+$btn-primary-color: #82b74b;
+$label-font-size: 1.7rem;
+$box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+$breakpoint-mobile: 440px;
+$breakpoint-tablet: 768px;
+
+@mixin btn-colors {
+  background: $btn-primary-color;
+  border: none;
+  cursor: pointer;
+}
+@mixin body-base-styling {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%; // 1 rem = 1px e.g 12 px = 1.2 rem
+}
+
+@mixin input-buttons-shapes {
+  padding: 12px;
+  width: clamp(150px, 90%, 450px);
+  border-radius: 4px;
+}
+
+body {
+  @include body-base-styling();
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-family: "Josefin Sans", sans-serif;
+  background: linear-gradient(0turn, black, white);
+}
+
+.form-wrapper {
+  margin: $normal-spacing;
+  width: clamp(100px, 100%, 550px);
+  background: $form-background-color;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-radius: 8px;
+  box-shadow: $box-shadow;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 0;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .form-wrapper__car-image {
+    object-fit: cover;
+    background-size: cover;
+    width: 100%;
+    max-height: 380px;
+    margin-bottom: $large-spacing;
+  }
+
+  .form-wrapper__form-content {
+    display: -ms-grid;
+    display: grid;
+    width: 100%;
+
+    box-sizing: border-box;
+    margin: $large-spacing;
+
+    @media (max-width: $breakpoint-mobile) {
+      margin: 0;
+      padding: $normal-spacing;
+      border-radius: none;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      margin: 0;
+      padding: $normal-spacing;
+      border-radius: 0;
+    }
+
+    .cars-selection,
+    .car-type-selection {
+      width: clamp(100px, 100%, 190px);
+      height: $normal-height;
+    }
+
+    & > * {
+      margin-bottom: $normal-spacing;
+    }
+
+    input,
+    button {
+      @include input-buttons-shapes();
+      outline-color: #c1946a;
+      outline-width: thick;
+    }
+
+    input,
+    select {
+      margin-top: $normal-spacing;
+      font-size: 1rem;
+      border: none;
+      margin-bottom: $normal-spacing;
+    }
+
+    select:hover {
+      cursor: pointer;
+    }
+
+    .btn-submit {
+      margin-top: $normal-spacing;
+      width: 150px;
+      @include btn-colors();
+
+      &:hover {
+        background: $btn-hover-color;
+      }
+    }
+    label {
+      display: -ms-grid;
+      display: grid;
+      font-size: $label-font-size;
+      color: white;
+    }
+
+    input[type="date"] {
+      max-width: 350px;
+      cursor: pointer;
+    }
+
+    .car-register-number {
+      max-width: 200px;
+    }
+  }
+}

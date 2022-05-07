@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-family: "Josefin Sans", sans-serif;
+  background: linear-gradient(0turn, black, white);
+}
+
+.form-wrapper {
+  margin: 15px;
+  width: clamp(100px, 100%, 550px);
+  background: #3e4444;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+@media (max-width: 440px) {
+  .form-wrapper {
+    padding: 0;
+    border-radius: 0;
+    margin: 0;
+  }
+}
+@media (max-width: 768px) {
+  .form-wrapper {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+  }
+}
+.form-wrapper .form-wrapper__car-image {
+  object-fit: cover;
+  background-size: cover;
+  width: 100%;
+  max-height: 380px;
+  margin-bottom: 22px;
+}
+.form-wrapper .form-wrapper__form-content {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 22px;
+}
+@media (max-width: 440px) {
+  .form-wrapper .form-wrapper__form-content {
+    margin: 0;
+    padding: 15px;
+    border-radius: none;
+  }
+}
+@media (max-width: 768px) {
+  .form-wrapper .form-wrapper__form-content {
+    margin: 0;
+    padding: 15px;
+    border-radius: 0;
+  }
+}
+.form-wrapper .form-wrapper__form-content .cars-selection,
+.form-wrapper .form-wrapper__form-content .car-type-selection {
+  width: clamp(100px, 100%, 190px);
+  height: 40px;
+}
+.form-wrapper .form-wrapper__form-content > * {
+  margin-bottom: 15px;
+}
+.form-wrapper .form-wrapper__form-content input,
+.form-wrapper .form-wrapper__form-content button {
+  padding: 12px;
+  width: clamp(150px, 90%, 450px);
+  border-radius: 4px;
+  outline-color: #c1946a;
+  outline-width: thick;
+}
+.form-wrapper .form-wrapper__form-content input,
+.form-wrapper .form-wrapper__form-content select {
+  margin-top: 15px;
+  font-size: 1rem;
+  border: none;
+  margin-bottom: 15px;
+}
+.form-wrapper .form-wrapper__form-content select:hover {
+  cursor: pointer;
+}
+.form-wrapper .form-wrapper__form-content .btn-submit {
+  margin-top: 15px;
+  width: 150px;
+  background: #82b74b;
+  border: none;
+  cursor: pointer;
+}
+.form-wrapper .form-wrapper__form-content .btn-submit:hover {
+  background: #c1946a;
+}
+.form-wrapper .form-wrapper__form-content label {
+  display: -ms-grid;
+  display: grid;
+  font-size: 1.7rem;
+  color: white;
+}
+.form-wrapper .form-wrapper__form-content input[type=date] {
+  max-width: 350px;
+  cursor: pointer;
+}
+.form-wrapper .form-wrapper__form-content .car-register-number {
+  max-width: 200px;
+}
+
+/*# sourceMappingURL=style.css.map */
